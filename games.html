@@ -1,0 +1,210 @@
+<html>
+   <head>
+      <title>STAEM 大作在线免费玩</title>
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
+      <style>
+         body {
+            background: radial-gradient(
+               farthest-corner at 40px 40px,
+               #3d4450 0%,
+               #23262e 80%
+            );
+            padding: 0;
+            margin: 0;
+            user-select: none;
+         }
+
+         .header {
+            left: 0;
+            top: 0;
+            height: 5em;
+            background: #171d25;
+            display: flex;
+            align-items: center;
+            padding: 0 2em;
+         }
+
+         .header > .title {
+            font-size: 1.25em;
+            font-weight: 900;
+            color: rgb(197, 195, 192);
+            letter-spacing: 1px;
+         }
+
+         .banner {
+            letter-spacing: 1em;
+            display: flex;
+            justify-content: center;
+            margin-top: 1.25em;  
+            font-size: 1.25em;
+            color: #fff;
+            font-weight: 600;
+         }
+
+         .content {
+            padding: 2em;
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+         }
+
+         .game {
+            box-shadow: 0 0 3px rgb(0, 0, 0, 0.2);
+            flex: 1;
+            min-width: 15em;
+            background: linear-gradient(
+               90deg,
+               rgba(86, 92, 103, 0.3),
+               rgba(90, 98, 108, 0.3)
+            );
+            transition: box-shadow 0.1s;
+            cursor: pointer;
+         }
+         .game:hover {
+            box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+         }
+
+         .game > .cover {
+            width: 100%;
+         }
+
+         .game > .details {
+            padding: 1em 1em;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+         }
+
+         .game > .details > .title {
+            font-size: 1.1em;
+            font-weight: 600;
+         }
+
+         .game > .details > .price {
+            font-size: 0.9em;
+         }
+
+         .more {
+            display: flex;
+            justify-content: center;
+         }
+
+         .more > span {
+            background: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
+            color: #fff;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            cursor: pointer;
+         }
+
+         .genshin {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            opacity: 0.1;
+            transition: opacity 0.5s;
+         }
+         .genshin.show {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+         }
+
+         .genshin > img {
+            transform: scaleX(1.6) scale(0.5);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="header">
+         <span class="title">STEAM 云平台</span>
+         <div class="menu"></div>
+      </div>
+      <div class="banner">数百大作在线免费游玩</div>
+      <div class="content">
+         <div class="game" onclick="start()">
+            <img
+               class="cover"
+               src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_231x87_schinese.jpg?t=1698860631"
+            />
+            <div class="details">
+               <div class="title">Counter-Strike 2</div>
+               <div class="price">免费开玩</div>
+            </div>
+         </div>
+         <div class="game" onclick="start()">
+            <img
+               class="cover"
+               src="https://cdn.akamai.steamstatic.com/steam/apps/578080/capsule_231x87.jpg?t=1700369413"
+            />
+            <div class="details">
+               <div class="title">PUBG: BATTLEGROUNDS</div>
+               <div class="price">免费开玩</div>
+            </div>
+         </div>
+         <div class="game" onclick="start()">
+            <img
+               class="cover"
+               src="https://cdn.akamai.steamstatic.com/steam/apps/1938090/capsule_231x87.jpg?t=1700244768"
+            />
+            <div class="details">
+               <div class="title">使命召换</div>
+               <div class="price">限时免费</div>
+            </div>
+         </div>
+         <div class="game" onclick="start()">
+            <img
+               class="cover"
+               src="https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_231x87.jpg?t=1700150367"
+            />
+            <div class="details">
+               <div class="title">Aepx Legends</div>
+               <div class="price">免费开玩</div>
+            </div>
+         </div>
+         <div class="game" onclick="start()">
+            <img
+               class="cover"
+               src="https://cdn.akamai.steamstatic.com/steam/apps/304930/capsule_231x87.jpg?t=1688148667"
+            />
+            <div class="details">
+               <div class="title">Untnrued</div>
+               <div class="price">免费开玩</div>
+            </div>
+         </div>
+         <div class="game" onclick="start()">
+            <img
+               class="cover"
+               src="https://cdn.akamai.steamstatic.com/steam/apps/252490/capsule_231x87.jpg?t=1699598132"
+            />
+            <div class="details">
+               <div class="title">RUST</div>
+               <div class="price">限时免费</div>
+            </div>
+         </div>
+      </div>
+      <div class="more">
+         <span onclick="start()">加载更多</span>
+      </div>
+      <div class="genshin">
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIABAMAAAAGVsnJAAAF62lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDggNzkuMTY0MDM2LCAyMDE5LzA4LzEzLTAxOjA2OjU3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjRFRTIzMDM3NjJEMTFFOTk2QkI5RkFCREI0MUFCNTAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDY0YTJhODUtOGI3OS00NDQ5LWI3ZTEtMmJmMjU2MzhlYWE1IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MjRFRTIzMDM3NjJEMTFFOTk2QkI5RkFCREI0MUFCNTAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMC0wMS0x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" />
+      </div>
+      <audio src="genshin-launching.mp3" class="audio" />
+      <script>
+         const start = () => {
+            document.querySelector('.genshin').classList.add('show');
+            document.querySelector('.audio').play();
+         }
+      </script>
+   </body>
+</html>
